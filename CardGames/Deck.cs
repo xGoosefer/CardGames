@@ -18,7 +18,7 @@ namespace CardGames
         {
             cards = new List<Card>();
             suits = [];
-            deckSize = 13;
+            deckSize = 12;
         }
 
         // adds cards to deck
@@ -42,7 +42,7 @@ namespace CardGames
             });
         }
 
-        public string AboutDeck()
+        public virtual string AboutDeck()
         {
             string about = string.Empty;
             foreach (Card card in cards)

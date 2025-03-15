@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using static System.Console;
 
 namespace CardGames
 {
@@ -14,7 +15,11 @@ namespace CardGames
 
         public void GetCardInfo()
         {
-            throw new System.NotImplementedException();
+            
+            FrenchDeck frenchDeck = new FrenchDeck();
+            frenchDeck.initDeck();
+            WriteLine(frenchDeck.AboutDeck());
+            
         }
 
         public void AdvanceRound()

@@ -11,8 +11,16 @@ namespace CardGames
         public FruitDeck()
         {
             this.deckSize = 10;
-            suits = new string[] { "Apples", "Oranges" };
+            suits = ["Apples", "Oranges"];
         }
-        
+        public override string AboutDeck()
+        {
+            string about = string.Empty;
+            foreach (Card card in cards)
+            {
+                about += card.AboutCard() + "\n";
+            }
+            return about.Trim();
+        }
     }
 }

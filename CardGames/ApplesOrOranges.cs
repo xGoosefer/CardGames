@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using static System.Console;
 
 namespace CardGames
 {
@@ -10,9 +11,12 @@ namespace CardGames
         private string Suits;
         private int Value;
 
+        // add cards to the deck so that we can see the card using the About Deck
         public void GetCardInfo()
         {
-            throw new System.NotImplementedException();
+            FruitDeck fruitDeck = new FruitDeck();
+            fruitDeck.initDeck();
+            WriteLine(fruitDeck.AboutDeck());
         }
 
         public void IsSameSuit()

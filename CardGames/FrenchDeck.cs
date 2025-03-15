@@ -11,11 +11,19 @@ namespace CardGames
         public FrenchDeck()
         {
             this.deckSize = 13;
-            suits = new string[] { "Diamonds", "Hearts", "Clubs", "Spades" };
+            suits = [ "Diamonds", "Hearts", "Clubs", "Spades" ];
 
-            initDeck();
+            
         }
 
-        
+        public override string AboutDeck()
+        {
+            string about = string.Empty;
+            foreach (Card card in cards)
+            {
+                about += card.AboutCard() + "\n";
+            }
+            return about.Trim();
+        }
     }
 }
