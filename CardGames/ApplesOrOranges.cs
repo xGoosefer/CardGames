@@ -27,7 +27,7 @@ namespace CardGames
             ReadKey();
             Play();
         }
-
+        // TODO: If tere are still cards in the deck! Run this method. Otherwise, shuffle a new deck of cards.
         public void IsSameSuit()
         {
             player.points = 0;
