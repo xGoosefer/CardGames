@@ -9,6 +9,7 @@ namespace CardGames
     {
         // Oh yeah, it's their hand
         public List<Card> Hand = new List<Card>();
+        public int points;
     }
 
 }

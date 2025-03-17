@@ -10,7 +10,7 @@ namespace CardGames
     {
         public FruitDeck()
         {
-            this.deckSize = 10;
+            this.deckSize = 13;
             suits = ["Apples", "Oranges"];
         }
         public override string AboutDeck()
