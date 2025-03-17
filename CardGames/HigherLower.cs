@@ -18,7 +18,8 @@ namespace CardGames
             FrenchDeck frenchDeck = new FrenchDeck();
             frenchDeck.initDeck();
             WriteLine(frenchDeck.AboutDeck());
-
+            WriteLine("\n Shufflled Deck \n");
+            frenchDeck.ShuffleDeck();
         }
 
         public void IsHigherorLower()
