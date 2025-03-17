@@ -18,13 +18,14 @@ namespace CardGames
         {
             Clear();
             fruitDeck.initDeck();
+            WriteLine("Cards in this deck! \n");
             WriteLine(fruitDeck.AboutDeck());
-            WriteLine("\n \n");
             fruitDeck.ShuffleDeck();
             player.Hand.Add(fruitDeck.Draw());
             WriteLine($"You have the {player.Hand[0].AboutCard()}. \n");
             IsSameSuit();
             ReadKey();
+            Play();
         }
 
         public void IsSameSuit()
@@ -54,6 +55,7 @@ namespace CardGames
                 {
                     WriteLine("You guessed correctly! You gained a point! \n");
                     p++;
+                    player.points++;
                     WriteLine($"You now have {p} points! \n");
 
                 }
@@ -62,8 +64,28 @@ namespace CardGames
                     WriteLine("You guessed wrong! \n");
                     WriteLine($"You still have {p} points! \n");
                 }
-
+                else if (player.Hand[0].Suit != board[0].Suit && isSame == false)
+                {
+                    WriteLine("You guessed correctly! You gained a point! \n");
+                    p++;
+                    player.points++;
+                    WriteLine($"You now have {p} points! \n");
+                }
+                else
+                {
+                    WriteLine("You guessed wrong! \n");
+                    WriteLine($"You still have {p} points! \n");
+                }
+                WriteLine("Press any key to continue.");
+                player.Hand.Remove(player.Hand[0]);
+                board.Remove(board[0]);
+                ReadKey();
+                Clear();
+                player.Hand.Add(fruitDeck.Draw());
+                WriteLine($"You have the {player.Hand[0].AboutCard()}. \n");
             }
+
+            WriteLine($"Congratulations! You earned {player.points} points! You won the game!");
         }
     }
 }

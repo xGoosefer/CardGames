@@ -41,19 +41,19 @@ namespace CardGames
 
         public void ApplesOrOranges()
         {
-            WriteLine("Cards in this deck! \n");
+            
             new ApplesOrOranges().GetCardInfo();
         }
 
         public void HighestMatch()
         {
-            WriteLine("Cards in this deck! \n");
+            
             new HighestMatch().GetCardInfo();
         }
 
         public void HigherLower()
         {
-            WriteLine("Cards in this deck! \n");
+            
             new HigherLower().GetCardInfo();
         }
     }
