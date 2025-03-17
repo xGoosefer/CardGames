@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,10 +9,12 @@ namespace CardGames
 {
     internal class Deck
     {
+        
         // Get deck of cards ready
         protected List<Card> cards;
         protected string[] suits;
         protected int deckSize;
+        
 
         // customizable properties from different decks
         public Deck()
@@ -51,5 +54,25 @@ namespace CardGames
             }
             return about.Trim();
         }
+
+        
+        
+             List<Card> Shuffle(List<Card> unshuffled)
+            {
+                unshuffled = cards;
+                Random randomNum = new Random();
+                return unshuffled.OrderBy(a => randomNum.Next()).ToList();
+            }
+        
+        public virtual void ShuffleDeck()
+        {
+            List<Card> shuffle = Shuffle(cards);
+            foreach (Card card in shuffle)
+            {
+                Console.WriteLine(card.AboutCard());
+            }
+            Console.ReadKey();
+        }
+        
     }
 }

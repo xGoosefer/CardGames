@@ -17,6 +17,8 @@ namespace CardGames
             FruitDeck fruitDeck = new FruitDeck();
             fruitDeck.initDeck();
             WriteLine(fruitDeck.AboutDeck());
+            WriteLine("\n Shufflled Deck \n");
+            fruitDeck.ShuffleDeck();
         }
 
         public void IsSameSuit()

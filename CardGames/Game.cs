@@ -8,7 +8,7 @@ namespace CardGames
 {
     public class Game
     {
-        protected string Instructions;
+        //protected string Instructions;
         
 
         public void Play()
