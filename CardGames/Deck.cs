@@ -56,14 +56,14 @@ namespace CardGames
         }
 
         
-        
+        // The method used to shuffled the cards inside the List of Cards
              List<Card> Shuffle(List<Card> unshuffled)
             {
                 unshuffled = cards;
                 Random randomNum = new Random();
                 return unshuffled.OrderBy(a => randomNum.Next()).ToList();
             }
-        
+        // This only reveals the selected deck of shuffled cards.
         public virtual void ShuffleDeck()
         {
             List<Card> shuffle = Shuffle(cards);
