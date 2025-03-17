@@ -6,7 +6,7 @@ using static System.Console;
 
 namespace CardGames
 {
-    public class HighestMatch:Game
+    internal class HighestMatch:Game
     {
         private string Suits;
 

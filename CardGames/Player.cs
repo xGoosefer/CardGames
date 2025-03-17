@@ -5,24 +5,10 @@ using System.Text;
 
 namespace CardGames
 {
-    public class Player:PersonPlayer
+    internal class Player 
     {
-        private int Points;
-
-        public void Discard()
-        {
-            throw new System.NotImplementedException();
-        }
+        // Oh yeah, it's their hand
+        public List<Card> Hand = new List<Card>();
     }
 
-    public class PersonPlayer
-    {
-        private int Points;
-        
-
-    }
-
-    public class Dealer:PersonPlayer
-    {
-    }
 }

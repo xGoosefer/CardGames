@@ -6,7 +6,7 @@ using static System.Console;
 
 namespace CardGames
 {
-    public class HigherLower : Game
+    internal class HigherLower : Game
     {
         private string Suits;
 

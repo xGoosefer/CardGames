@@ -6,10 +6,10 @@ using static System.Console;
 
 namespace CardGames
 {
-    public class Game
+    internal class Game
     {
         //protected string Instructions;
-        
+        public Player player = new Player();
 
         public void Play()
         {
@@ -37,26 +37,23 @@ namespace CardGames
             Play();
         }
 
-        public void Draw()
-        {
-            throw new System.NotImplementedException();
-        }
+       
 
         public void ApplesOrOranges()
         {
-            WriteLine("CHOSEN");
+            WriteLine("Cards in this deck! \n");
             new ApplesOrOranges().GetCardInfo();
         }
 
         public void HighestMatch()
         {
-            WriteLine("CHOSEN");
+            WriteLine("Cards in this deck! \n");
             new HighestMatch().GetCardInfo();
         }
 
         public void HigherLower()
         {
-            WriteLine("CHOSEN");
+            WriteLine("Cards in this deck! \n");
             new HigherLower().GetCardInfo();
         }
     }

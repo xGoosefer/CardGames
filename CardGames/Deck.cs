@@ -14,7 +14,8 @@ namespace CardGames
         protected List<Card> cards;
         protected string[] suits;
         protected int deckSize;
-        
+        List<Card> shuffle;
+
 
         // customizable properties from different decks
         public Deck()
@@ -66,13 +67,20 @@ namespace CardGames
         // This only reveals the selected deck of shuffled cards.
         public virtual void ShuffleDeck()
         {
-            List<Card> shuffle = Shuffle(cards);
-            foreach (Card card in shuffle)
-            {
-                Console.WriteLine(card.AboutCard());
-            }
-            Console.ReadKey();
+            shuffle = Shuffle(cards);
+            //foreach (Card card in shuffle)
+            //{
+            //    Console.WriteLine(card.AboutCard());
+            //}
+            //Console.ReadKey();
         }
-        
+        // Draw the top card from the shuffled deck and remove it from the deck.
+        public Card Draw()
+        {
+            Card card = shuffle[0];
+            shuffle.Remove(card);
+            return card;
+        }
+
     }
 }
