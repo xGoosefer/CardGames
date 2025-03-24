@@ -10,6 +10,7 @@ namespace CardGames
     {
         //protected string Instructions;
         public Player player = new Player();
+        
 
         public void Play()
         {
