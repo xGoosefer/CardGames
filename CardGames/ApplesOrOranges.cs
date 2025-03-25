@@ -26,6 +26,7 @@ namespace CardGames
             WriteLine($"You have the {player.Hand[0].AboutCard()}. \n");
             IsSameSuit();
             ReadKey();
+            Clear();
             Play();
         }
         
@@ -98,7 +99,7 @@ namespace CardGames
                 
             }
 
-            WriteLine($"Congratulations! You earned {player.points} points! You won the game!");
+            WriteLine($"Congratulations! You earned {player.points} points! You won the game! \n \n Press any key to continue.");
         }
     }
 }

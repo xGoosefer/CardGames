@@ -21,6 +21,10 @@ namespace CardGames
             WriteLine(frenchDeck.AboutDeck());
             WriteLine("\n Shufflled Deck \n");
             frenchDeck.ShuffleDeck();
+            WriteLine($"Congratulations! \n This game is currently not finished. \n \n Press any key to continue.");
+            ReadKey();
+            Clear();
+            Play();
         }
 
         public void AdvanceRound()
